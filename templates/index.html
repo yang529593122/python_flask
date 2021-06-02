@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="/static/css/index.css">
+</head>
+<body>
+<div>
+    {% if username %}
+         <a href="/loginout">退出</a>
+         <span>欢迎 {{ username }}  同学</span>
+    {% else %}
+        <a href="/login">登陆</a>
+    {% endif %}
+
+</div>
+{% for k in data %}
+    <p>{{ k.title }}</p>
+{% endfor %}
+</body>
+</html>

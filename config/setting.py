@@ -1,0 +1,10 @@
+# 服务端口配置
+SERVER_PORT = 9999
+
+# MySQL配置
+MYSQL_HOST = "192.168.30.200"
+MYSQL_PORT = 3306
+MYSQL_USER = "yang"
+MYSQL_PASSWD = "ypf123456"
+MYSQL_DB = "ypf"
+
