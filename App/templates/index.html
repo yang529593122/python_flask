@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="/static/index.css">
+</head>
+<body>
+<p>我是首页</p>
+<p>
+    {% if request.cookies.get('username') %}
+        <span>欢迎{{ request.cookies.get('username') }}用户 使用系统</span>
+        <a href="/loginOut">退出</a>
+        <a href="/admin">后台管理系统</a>
+    {% else %}
+        <a href="/login">用户登录</a>
+    {% endif %}
+    <hr>
+    <h6>列表</h6>
+    {% for k in articledata %}
+        <p>{{ k.title }}</p>
+    {% endfor %}
+
+</p>
+</body>
+</html>
